@@ -8,6 +8,4 @@ import java.util.Scanner;
 public interface Reader {
 
     public List<Player> getPlayers();
-
-    public int extractInt(String str);
 }
