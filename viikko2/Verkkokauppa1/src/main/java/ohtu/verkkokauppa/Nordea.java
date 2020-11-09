@@ -2,19 +2,10 @@ package ohtu.verkkokauppa;
 
 public class Nordea implements Pankki {
 
-    private static Nordea instanssi;
-
-    public static Nordea getInstance() {
-        if (instanssi == null) {
-            instanssi = new Nordea();
-        }
-
-        return instanssi;
-    }
     private Kirjanpito kirjanpito;
 
-    public Nordea() {
-        kirjanpito = Kirjanpito.getInstance();
+    public Nordea(Kirjanpito k) {
+        kirjanpito = k;
     }
 
     @Override
