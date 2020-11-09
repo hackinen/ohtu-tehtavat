@@ -1,7 +1,11 @@
 package ohtu.verkkokauppa;
 
-public class Nordea implements Pankki {
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
+public class Nordea implements Pankki {
+    @Autowired
     private Kirjanpito kirjanpito;
 
     public Nordea(Kirjanpito k) {
