@@ -3,6 +3,7 @@ package ohtu.verkkokauppa;
 import org.junit.Before;
 import org.junit.Test;
 
+import jdk.jfr.Timestamp;
 import ohtu.verkkokauppa.Kauppa;
 
 import static org.junit.Assert.*;
@@ -114,6 +115,67 @@ public class KauppaTest {
         k.tilimaksu("pekka", "12345");
 
         verify(pankki).tilisiirto(eq("pekka"), anyInt(), eq("12345"), eq("33333-44455"), eq(5));
+    }
+
+    @Test
+    public void aloitaAsiointiNOllaaEdellisenOstoksenTiedot() {
+        when(viite.uusi()).thenReturn(42);
+
+        Varasto varasto = mock(Varasto.class);
+        when(varasto.saldo(1)).thenReturn(10); 
+        when(varasto.saldo(2)).thenReturn(10);
+        when(varasto.haeTuote(1)).thenReturn(new Tuote(1, "maito", 5));
+        when(varasto.haeTuote(2)).thenReturn(new Tuote(2, "soijamaito", 6));
+        Kauppa k = new Kauppa(varasto, pankki, viite);              
+
+        k.aloitaAsiointi();
+        k.lisaaKoriin(2);
+        k.tilimaksu("pekka", "12345");
+        k.aloitaAsiointi();
+        k.lisaaKoriin(1);
+        k.tilimaksu("maija", "11111");
+        verify(pankki).tilisiirto(eq("maija"), anyInt(), eq("11111"), eq("33333-44455"), eq(5));
+    }
+
+    @Test
+    public void kauppaPyytaaUudenViitenumeronJokaiselleMaksutapahtumalle() {
+        when(viite.uusi()).thenReturn(42);
+
+        Varasto varasto = mock(Varasto.class);
+        when(varasto.saldo(1)).thenReturn(10); 
+        when(varasto.saldo(2)).thenReturn(10);
+        when(varasto.haeTuote(1)).thenReturn(new Tuote(1, "maito", 5));
+        when(varasto.haeTuote(2)).thenReturn(new Tuote(2, "soijamaito", 6));
+        Kauppa k = new Kauppa(varasto, pankki, viite);              
+
+        k.aloitaAsiointi();
+        k.lisaaKoriin(2);
+        k.tilimaksu("pekka", "12345");
+        k.aloitaAsiointi();
+        k.lisaaKoriin(1);
+        k.tilimaksu("maija", "11111");
+
+        verify(viite, times(2)).uusi();
+    }
+
+    @Test
+    public void poistaKoristaPalauttaaTuotteenVarastoon() {
+        when(viite.uusi()).thenReturn(42);
+
+        Varasto varasto = mock(Varasto.class);
+        when(varasto.saldo(1)).thenReturn(10); 
+        when(varasto.haeTuote(1)).thenReturn(new Tuote(1, "maito", 5));
+
+        Kauppa k = new Kauppa(varasto, pankki, viite);              
+
+        k.aloitaAsiointi();
+        k.lisaaKoriin(1);
+        k.lisaaKoriin(1);
+        k.poistaKorista(1);
+        k.tilimaksu("pekka", "12345");
+
+        verify(varasto, times(1)).palautaVarastoon(any());   
+  
     }
 
 }

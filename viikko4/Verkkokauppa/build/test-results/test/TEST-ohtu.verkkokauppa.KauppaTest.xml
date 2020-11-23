@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ohtu.verkkokauppa.KauppaTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-11-23T10:31:40" hostname="lx8-fuxi122" time="0.874">
+<testsuite name="ohtu.verkkokauppa.KauppaTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2020-11-23T10:47:01" hostname="lx8-fuxi122" time="1.306">
   <properties/>
-  <testcase name="kahdenSamanOstoksenJälkeenTilisiirtoaKutsutaanOikein" classname="ohtu.verkkokauppa.KauppaTest" time="0.861"/>
-  <testcase name="ostoksenPaaytyttyaPankinMetodiaTilisiirtoKutsutaanOikeillaParametreilla" classname="ohtu.verkkokauppa.KauppaTest" time="0.004"/>
-  <testcase name="ostoksenPaaytyttyaPankinMetodiaTilisiirtoKutsutaan" classname="ohtu.verkkokauppa.KauppaTest" time="0.002"/>
-  <testcase name="kahdenEriOstoksenJälkeenTilisiirtoaKutsutaanOikein" classname="ohtu.verkkokauppa.KauppaTest" time="0.002"/>
-  <testcase name="saatavillaOlevanJaLoppuunmyydynOstoksenJalkeenTilisiirtoaKutsutaanOikein" classname="ohtu.verkkokauppa.KauppaTest" time="0.003"/>
+  <testcase name="kahdenSamanOstoksenJälkeenTilisiirtoaKutsutaanOikein" classname="ohtu.verkkokauppa.KauppaTest" time="1.266"/>
+  <testcase name="kauppaPyytaaUudenViitenumeronJokaiselleMaksutapahtumalle" classname="ohtu.verkkokauppa.KauppaTest" time="0.007"/>
+  <testcase name="ostoksenPaaytyttyaPankinMetodiaTilisiirtoKutsutaanOikeillaParametreilla" classname="ohtu.verkkokauppa.KauppaTest" time="0.003"/>
+  <testcase name="poistaKoristaPalauttaaTuotteenVarastoon" classname="ohtu.verkkokauppa.KauppaTest" time="0.008"/>
+  <testcase name="ostoksenPaaytyttyaPankinMetodiaTilisiirtoKutsutaan" classname="ohtu.verkkokauppa.KauppaTest" time="0.004"/>
+  <testcase name="kahdenEriOstoksenJälkeenTilisiirtoaKutsutaanOikein" classname="ohtu.verkkokauppa.KauppaTest" time="0.003"/>
+  <testcase name="saatavillaOlevanJaLoppuunmyydynOstoksenJalkeenTilisiirtoaKutsutaanOikein" classname="ohtu.verkkokauppa.KauppaTest" time="0.006"/>
+  <testcase name="aloitaAsiointiNOllaaEdellisenOstoksenTiedot" classname="ohtu.verkkokauppa.KauppaTest" time="0.006"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
