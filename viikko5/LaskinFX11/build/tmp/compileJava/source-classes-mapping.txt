@@ -1,3 +1,9 @@
+laskin/Main.java
+ laskin.Main
+laskin/GraafinenLaskin.java
+ laskin.GraafinenLaskin
+laskin/komennot/Komento.java
+ laskin.komennot.Komento
 laskin/Tapahtumankuuntelija.java
  laskin.Tapahtumankuuntelija
 laskin/Sovelluslogiikka.java
@@ -8,9 +14,3 @@ laskin/komennot/Erotus.java
  laskin.komennot.Erotus
 laskin/komennot/Summa.java
  laskin.komennot.Summa
-laskin/komennot/Komento.java
- laskin.komennot.Komento
-laskin/GraafinenLaskin.java
- laskin.GraafinenLaskin
-laskin/Main.java
- laskin.Main

@@ -44,6 +44,15 @@ public class Erotus implements Komento {
     
     @Override
     public void peru() {
+        int vast = sovellus.palautaEdellinen();
+        tulos.setText(String.valueOf(vast));
+        syote.setText("");
         
+        if ( vast==0) {
+            nollaa.disableProperty().set(true);
+        } else {
+            nollaa.disableProperty().set(false);
+        }
+        undo.disableProperty().set(false);
     }
 }
