@@ -1,0 +1,5 @@
+# Retrospektiivi
+
+Pidimme tänään miniprojektiryhmämme kanssa retrospektiivin ja valitsimme tekniikaksi "Glad, Sad, Mad"-tekniikan. Etätyöskentelyn rajoitusten takia emme kuitenkaan käyttäneet aivan täysin tekniikan mukaisia toimenpiteitä (kortit, valkotaulu..), vaan pidimme zoomissa videokokouksen, jossa jokainen mainitsi hyviä ja huonoja havaintojaan sprintin ajalta, joihin sitten muut äänestivät Glad, Sad tai Mad. Retrospektiivi onnistui mielestäni hyvin näilläkin keinoilla, sillä ryhmällämme oli jo alusta asti hyvä kommunikaatio. Pääosin kaikki olivat tyytyväisiä sprintin tapahtumiin ja saavutuksiin sekä ryhmän yhteistyöhön, mutta muutamia parannusehdotuksiakin löysimme, muun muassa esimerkiksi koodin sisäisessä laadussa ja koheesiossa oli parannettavaa seuraavaa sprinttiä ajatellen.
+
+Tulevaisuutta ajatellen on varmaankin kannattavaa harjoitella miniprojektin retrospektiiveissä muitakin tekniikoita ja ehkä kokeilla harjoittelua myös hiukan tarkemmin retrospektiiviteekniikan “sääntöjen” mukaan. Kuitenkin mielessä on pidettävä myös se, että retrospektiivistä olisi jotain hyötyäkin, eikä vain noudatettaisi orjallisesti ohjeita.
