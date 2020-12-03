@@ -39,4 +39,9 @@ public class QueryBuilder {
         m = new And(m, new HasFewerThan(val,cat));
         return this;
     }
+    
+    public QueryBuilder oneOf(Matcher m1, Matcher m2) {
+        m = new Or(m1, m2);
+        return this;
+    }
 }
